@@ -1,0 +1,107 @@
+Core Topic
+--------------
+Core Java (6,7,8) [core, collection, concurrency, Generics, IO/NIO]
+Algorithm & Data-structure
+Design-pattern and Design Architecture
+
+Build Tools
+-------------
+Maven, Jenkins [CI]
+
+Application Design
+------------------------
+UML
+
+Messaging
+---------------
+RabbitMQ, JMS(ActiveMQ),  HORNETQ
+
+Integration
+---------------
+Spring Integration, Apache Camel
+
+Server side frameworks
+------------------------------
+NodeJs
+Spring (IOC, ORM, AOP, MVC, Webflow, Security, Batch, JMS, Spring Boot)
+Hibernate
+JPA
+
+Database
+------------
+SQL/PLSQL
+
+Chart tools
+--------------
+D3, High chart
+
+Communication
+-----------------
+CE Communication
+
+Project Versioning
+-------------------
+version control : GIT , SVN
+
+Project SDLC
+------------------
+Scrum Master, Scrum principle
+
+WebServices
+-----------------
+SOAP, REST (JERSEY,OAUTH2)
+
+Front End
+--------------
+Angularjs : (gulpjs)
+Requirejs,  JQuery,  Ajax,  HTML5,  CSS3 ,  BootStrap
+
+OS Platform
+----------------
+Unix , Ubuntu
+
+Testing
+----------
+TestNG
+Junit
+
+Cloud
+--------
+cloud deployment solution (AWS, Google)
+
+Big Data
+-------------
+python, R, BigData(Hadoop)
+
+Advance Subject
+----------------------
+1. Mule, IOT, Cloud, Backbonejs, Extjs, Android(Mobile Application Design), Dust
+2. Mobile Application development using Apache Cordova
+
+Application Optimization
+--------------------------------
+1. Application scalability
+2. Data center scalability
+3. Performance Tuning
+
+Project
+------------
+project implementaion [Agriculture Ecomm]
+
+Data Virtualization
+------------------------
+Composite tool
+
+Consulting Tools and Methods
+--------------------------------------
+IndustryPrint5 : Business Process Modelling
+PMC : Project Management Centre
+PE&PS : Project Estimator and Planing Suite
+
+Official Study Plan(2017)
+------------------------------
+
+Root New OS in Android phone
+----------------------------------------
+https://www.youtube.com/watch?v=5dHrmy2975o
+http://download.cyanogenmod.org/

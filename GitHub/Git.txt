@@ -1,0 +1,161 @@
+Reverting a merge conflict
+=====================
+git merge --abort
+
+GIt GUI
+===============
+gitk : display history
+https://git-scm.com/book/en/v2/Git-in-Other-Environments-Graphical-Interfaces
+
+Resolving Conflict:
+=================
+https://githowto.com/resolving_conflicts
+
+Stashing the changes
+======================
+git stash
+git stash list
+git stash show
+git stash apply
+
+user name changes
+==================
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+git push (Error code fatal unable to access remote url)
+========================================================
+http://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
+git remote set-url origin <https://yourusername@github.com/user/repo.git>
+
+Git LH: http://vmh-smile-deci-b01.lpa.dlh.de/cup/cup-webservice.git
+
+discard changes in file
+=======================
+git checkout -- <filename>
+
+Fetch all branches
+===================
+git fetch origin (It brings down new  remote branches pushed by others)
+http://stackoverflow.com/questions/10312521/how-to-fetch-all-git-branches
+
+Checkout from remote branch
+================================
+git checkout -b <branch> <remote>/<branch> (switching to a local branch based out of existing remote branch and track)
+git checkout --track <remote>/<branch> (shortcut for the above)
+https://git-scm.com/docs/git-checkout
+
+Delete branch
+=============
+git branch -d branchname (delete a local branch)
+git push origin :remotebranch (delete a remote branch) [while deleting remote repo don't prepend remotes/origin]
+
+git diff
+==========
+git diff : shows difference between staged and unstaged changes
+git diff --staged : shows difference between staged and last commit.
+
+Merge
+=========
+git checkout <mergeIntoBrach(feature)>
+git merge <MergeInBranch(dev)>
+git merge --abort (abort current merge)
+
+git add
+========
+git add : used for staging a file and also adding a new file for tracking.
+
+git commit
+==========
+git commit -am 'comment' [ stage all file before commit]
+
+Removing File from staging Area and file system
+===============================================
+rm 'file name'
+git rm 'file name'
+
+Removing file from staging Area but keep it in File system
+===========================================================
+git rm --cached 'filename'
+
+git push
+=========
+$ git checkout -b feature_branch_name
+... edit files, add and commit ...
+$ git push -u origin feature_branch_name
+
+git pull
+========
+git pull will do the (git fetch + git merge)
+
+git pull master to development branch
+=====================================
+http://stackoverflow.com/questions/20101994/git-pull-from-master-into-the-development-branch
+git checkout dmgr2      # gets you "on branch dmgr2"
+git fetch origin        # gets you up to date with origin
+git merge origin/master
+-------------
+git checkout dmgr2
+git pull origin master
+
+git Resolve
+=============
+git mergetool
+git add (resolved)
+
+conflict resolution
+======================
+https://githowto.com/resolving_conflicts (manual)
+https://tortoisegit.org/docs/tortoisegit/tgit-dug-conflicts.html (Tortorise Git)
+
+Git installation
+=================
+https://blog.assembla.com/AssemblaBlog/tabid/12618/bid/77264/Setting-Up-Git-on-Windows-in-Four-Easy-Steps.aspx (steps)
+
+Git GUI
+========
+git bash -> git gui
+tortorise git
+
+Tools
+--------
+altassian source tree.
+https://git-for-windows.github.io/ (git for windows)
+
+Git branch tracking detail
+===========================
+git branch -vv
+
+Git Detached head
+-------------------
+git commit -am message
+git branch newbranch
+git checkout --track remote banch
+git merge newBranch
+
+track an existing branch
+=====================
+
+git branch -u upstream/foo
+
+Cherry Pick
+===============
+
+git checkout master
+git cherry-pick 62ecb3
+
+https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/
+
+Force Push
+=============
+git push -f origin branch
+
+Reverting  a File to a different commit
+==================================
+git checkout (sha-id) file/to/restore
