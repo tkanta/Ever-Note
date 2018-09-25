@@ -1,0 +1,17 @@
+FROM amazonlinux:2016.09
+RUN yum install epel-release; \
+    yum install varnish
+ADD default.vcl /etc/varnish/default.vcl
+# Test configuration
+RUN varnishd -C -f /etc/varnish/default.vcl
+# CMD '/usr/sbin/varnishd -P /var/run/varnish.pid -f /etc/varnish/default.vcl -a :8080 -T 127.0.0.1:6082 -S /etc/varnish/secret -s malloc,256M'
+RUN echo VARNISH_LISTEN_PORT=8080 >> /etc/varnish/varnish.params
+CMD 'source /etc/varnish/varnish.params; \
+     /usr/sbin/varnishd \
+        -P /var/run/varnish.pid \
+        -f $VARNISH_VCL_CONF \
+        -a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
+        -T ${VARNISH_ADMIN_LISTEN_ADDRESS}:${VARNISH_ADMIN_LISTEN_PORT} \
+        -S $VARNISH_SECRET_FILE \
+        -s $VARNISH_STORAGE \
+        $DAEMON_OPTS'
